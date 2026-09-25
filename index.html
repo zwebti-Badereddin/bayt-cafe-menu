@@ -1,0 +1,440 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="مينيو مقهى البيوت">
+
+  <title>مقهى البيوت</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f8faf8;
+      color: #222;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      margin: auto;
+      padding: 0 14px 35px;
+    }
+
+    /* =========================
+       رأس الصفحة
+    ========================= */
+
+    .header {
+      background: #ffffff;
+      text-align: center;
+      padding: 30px 15px 25px;
+      margin: 0 -14px 20px;
+      border-radius: 0 0 28px 28px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #eef7eb;
+      border-radius: 22px;
+
+      font-size: 40px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 800;
+      color: #263126;
+    }
+
+    .header p {
+      margin: 7px 0 0;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* =========================
+       أزرار الأقسام
+    ========================= */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .category {
+      display: block;
+
+      padding: 17px 10px;
+
+      background: #ffffff;
+      border: 1px solid #e7eee5;
+      border-radius: 18px;
+
+      text-align: center;
+      text-decoration: none;
+
+      color: #263126;
+      font-size: 16px;
+      font-weight: bold;
+
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+
+      transition: transform 0.15s ease;
+    }
+
+    .category:active {
+      transform: scale(0.97);
+    }
+
+    .category-icon {
+      display: block;
+      font-size: 29px;
+      margin-bottom: 4px;
+    }
+
+    /* =========================
+       الأقسام
+    ========================= */
+
+    .section {
+      margin-bottom: 32px;
+      scroll-margin-top: 15px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      margin: 0 2px 13px;
+    }
+
+    .section-icon {
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #eef7eb;
+      border-radius: 14px;
+
+      font-size: 23px;
+      flex-shrink: 0;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 21px;
+      color: #293329;
+    }
+
+    .section-title p {
+      margin: 1px 0 0;
+      color: #888;
+      font-size: 12px;
+    }
+
+    /* =========================
+       صور الأصناف
+    ========================= */
+
+    .items {
+      display: grid;
+      gap: 10px;
+    }
+
+    .item {
+      background: #ffffff;
+      border: 1px solid #edf1ec;
+      border-radius: 18px;
+
+      min-height: 100px;
+      padding: 10px;
+
+      display: flex;
+      align-items: center;
+
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+    }
+
+    .item-image {
+      width: 82px;
+      height: 82px;
+
+      flex: 0 0 82px;
+
+      object-fit: cover;
+
+      border-radius: 15px;
+
+      background: #f0f3ef;
+    }
+
+    /*
+      لا توجد أسماء أو أسعار هنا.
+      سيتم وضعها لاحقاً بعد اختيار الصور الحقيقية.
+    */
+
+    /* =========================
+       الفوتر
+    ========================= */
+
+    .footer {
+      text-align: center;
+      padding: 15px 0 5px;
+
+      color: #999;
+      font-size: 12px;
+    }
+
+    /* =========================
+       الشاشات الأكبر
+    ========================= */
+
+    @media (min-width: 600px) {
+
+      .categories {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .category {
+        padding: 19px 8px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- =========================
+         رأس المينيو
+    ========================= -->
+
+    <header class="header">
+
+      <div class="logo">
+        ☕
+      </div>
+
+      <h1>مقهى البيوت</h1>
+
+      <p>أهلاً بكم</p>
+
+    </header>
+
+
+    <!-- =========================
+         الأقسام الأربعة
+    ========================= -->
+
+    <nav class="categories">
+
+      <a href="#refreshments" class="category">
+        <span class="category-icon">🥤</span>
+        مرطبات
+      </a>
+
+      <a href="#hot-drinks" class="category">
+        <span class="category-icon">☕</span>
+        مشروبات ساخنة
+      </a>
+
+      <a href="#breakfast" class="category">
+        <span class="category-icon">🍳</span>
+        إفطار صباحي
+      </a>
+
+      <a href="#pastries" class="category">
+        <span class="category-icon">🥐</span>
+        معجنات
+      </a>
+
+    </nav>
+
+
+    <!-- =========================
+         مرطبات
+    ========================= -->
+
+    <section class="section" id="refreshments">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          🥤
+        </div>
+
+        <div>
+          <h2>مرطبات</h2>
+          <p>مشروبات باردة ومنعشة</p>
+        </div>
+
+      </div>
+
+
+      <div class="items">
+
+        <!-- عصير فراولة -->
+
+        <article class="item">
+
+          <img
+            class="item-image"
+            src="images/مرطبات/عصير فراولة.JPG"
+            alt="عصير فراولة">
+
+        </article>
+
+
+        <!-- عصير برتقال -->
+
+        <article class="item">
+
+          <img
+            class="item-image"
+            src="images/مرطبات/عصير برتقال.JPG"
+            alt="عصير برتقال">
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         مشروبات ساخنة
+    ========================= -->
+
+    <section class="section" id="hot-drinks">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          ☕
+        </div>
+
+        <div>
+          <h2>مشروبات ساخنة</h2>
+          <p>مشروبات ساخنة وقهوة</p>
+        </div>
+
+      </div>
+
+
+      <div class="items">
+
+        <!--
+          ستتم إضافة صور المشروبات الساخنة هنا
+        -->
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         إفطار صباحي
+    ========================= -->
+
+    <section class="section" id="breakfast">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          🍳
+        </div>
+
+        <div>
+          <h2>إفطار صباحي</h2>
+          <p>اختيارات الإفطار</p>
+        </div>
+
+      </div>
+
+
+      <div class="items">
+
+        <!--
+          ستتم إضافة صور الإفطار هنا
+        -->
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         معجنات
+    ========================= -->
+
+    <section class="section" id="pastries">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          🥐
+        </div>
+
+        <div>
+          <h2>معجنات</h2>
+          <p>معجنات ومخبوزات</p>
+        </div>
+
+      </div>
+
+
+      <div class="items">
+
+        <!--
+          ستتم إضافة صور المعجنات هنا
+        -->
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         نهاية الصفحة
+    ========================= -->
+
+    <footer class="footer">
+      © مقهى البيوت
+    </footer>
+
+  </main>
+
+</body>
+</html>
+```
