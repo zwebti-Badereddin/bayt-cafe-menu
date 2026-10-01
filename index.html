@@ -1,488 +1,63 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>مقهى البيوت</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  background:#f7f3ea;
-  color:#30382b;
-  font-family:"Cairo",sans-serif;
-}
-
-.container{
-  width:min(100%, 720px);
-  margin:auto;
-  padding:0 16px 30px;
-}
-
-/* ===== HEADER ===== */
-
-.header{
-  text-align:center;
-  padding:24px 0 18px;
-}
-
-.logo{
-  width:190px;
-  height:190px;
-  object-fit:cover;
-  border-radius:50%;
-  display:block;
-  margin:auto;
-  border:5px solid #d9e5c7;
-  box-shadow:0 8px 22px rgba(66,57,42,.12);
-}
-
-/* ===== CATEGORY NAVIGATION ===== */
-
-.categories{
-  display:flex;
-  gap:14px;
-  overflow-x:auto;
-  padding:8px 2px 18px;
-  scrollbar-width:none;
-}
-
-.categories::-webkit-scrollbar{
-  display:none;
-}
-
-.category{
-  flex:0 0 88px;
-  text-decoration:none;
-  color:#526d2d;
-  text-align:center;
-  font-size:12px;
-  font-weight:700;
-}
-
-.category-image{
-  width:78px;
-  height:78px;
-  margin:auto auto 6px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid #fff;
-  box-shadow:0 5px 15px rgba(66,57,42,.12);
-}
-
-/* ===== SECTION ===== */
-
-.menu-section{
-  margin-top:18px;
-  scroll-margin-top:20px;
-}
-
-.section-title{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  margin:0 0 14px;
-  font-size:22px;
-  font-weight:800;
-  color:#526d2d;
-}
-
-.section-title::after{
-  content:"";
-  height:2px;
-  flex:1;
-  background:#dce6cc;
-}
-
-/* ===== PRODUCTS ===== */
-
-.items{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-}
-
-.item{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 6px 18px rgba(66,57,42,.09);
-  border:1px solid #eee8dc;
-}
-
-.item-image{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:cover;
-  display:block;
-}
-
-.item-content{
-  padding:11px 12px 13px;
-}
-
-.item-name{
-  margin:0;
-  font-size:15px;
-  font-weight:700;
-  line-height:1.5;
-  color:#30382b;
-}
-
-.item-price{
-  margin-top:6px;
-  font-size:14px;
-  font-weight:800;
-  color:#d77b28;
-}
-
-/* ===== DELIVERY ===== */
-
-.delivery-box{
-  margin:42px 0 18px;
-  padding:20px 18px 22px;
-  text-align:center;
-  background:linear-gradient(135deg,#e8f0dc 0%,#f4f7ed 100%);
-  border:2px solid #d6e3c1;
-  border-radius:24px;
-  box-shadow:0 8px 22px rgba(66,57,42,.09);
-}
-
-.delivery-title{
-  margin:0 0 4px;
-  font-size:17px;
-  font-weight:700;
-  color:#526d2d;
-}
-
-.delivery-text{
-  margin:0 0 9px;
-  font-size:12px;
-  color:#817967;
-}
-
-.delivery-phone{
-  display:inline-block;
-  direction:ltr;
-  text-decoration:none;
-  font-size:21px;
-  font-weight:800;
-  color:#30382b;
-  letter-spacing:.7px;
-}
-
-/* ===== MOBILE ===== */
-
-@media(max-width:480px){
-
-  .container{
-    padding-left:12px;
-    padding-right:12px;
-  }
-
-  .header{
-    padding-top:18px;
-  }
-
-  .logo{
-    width:165px;
-    height:165px;
-  }
-
-  .categories{
-    gap:10px;
-  }
-
-  .category{
-    flex-basis:78px;
-    font-size:11px;
-  }
-
-  .category-image{
-    width:68px;
-    height:68px;
-  }
-
-  .section-title{
-    font-size:19px;
-  }
-
-  .items{
-    gap:10px;
-  }
-
-  .item-content{
-    padding:9px 10px 11px;
-  }
-
-  .item-name{
-    font-size:14px;
-  }
-
-  .item-price{
-    font-size:13px;
-  }
-
-  .delivery-box{
-    margin-top:34px;
-  }
-
-  .delivery-title{
-    font-size:16px;
-  }
-
-}
-
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#f7f4ee;color:#30382b;font-family:"Cairo",sans-serif}
+.app{width:min(100%,720px);margin:auto;padding:0 14px 30px}
+.topbar{display:flex;align-items:center;gap:12px;padding:16px 4px 12px}
+.topbar-logo{width:54px;height:54px;border-radius:16px;object-fit:cover;box-shadow:0 5px 15px rgba(66,57,42,.12)}
+.brand{line-height:1.2}.brand-ar{font-size:18px;font-weight:800;color:#526d2d}.brand-en{font-size:10px;letter-spacing:2px;color:#9a8f7d;margin-top:3px;direction:ltr}
+.hero{position:relative;overflow:hidden;border-radius:26px;min-height:235px;box-shadow:0 10px 28px rgba(66,57,42,.13)}
+.hero img{width:100%;height:235px;display:block;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(35,39,27,.72),rgba(35,39,27,.05) 70%)}
+.hero-content{position:absolute;z-index:1;right:20px;left:20px;bottom:18px;color:#fff}
+.hero-title{margin:0;font-size:25px;font-weight:800}.hero-subtitle{margin:4px 0 0;font-size:12px;opacity:.92}
+.categories{display:flex;gap:9px;overflow-x:auto;padding:16px 2px 8px;scrollbar-width:none;position:sticky;top:0;z-index:5;background:#f7f4ee}.categories::-webkit-scrollbar{display:none}
+.category{flex:0 0 auto;text-decoration:none;color:#526d2d;background:#fff;border:1px solid #e8e1d5;border-radius:999px;padding:8px 14px;font-size:12px;font-weight:700;box-shadow:0 3px 10px rgba(66,57,42,.06);white-space:nowrap}
+.menu-section{margin-top:22px;scroll-margin-top:62px}.section-title{display:flex;align-items:center;gap:8px;margin:0 0 12px;font-size:20px;font-weight:800;color:#526d2d}.section-title::after{content:"";height:2px;flex:1;background:#dce6cc}
+.items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.item{background:#fff;border-radius:19px;overflow:hidden;box-shadow:0 6px 18px rgba(66,57,42,.08);border:1px solid #eee8dc}.item-image{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}.item-content{padding:10px 12px 12px}.item-name{margin:0;font-size:14px;font-weight:700;line-height:1.5;color:#30382b}
+.delivery-box{margin:38px 0 10px;padding:19px 18px 21px;text-align:center;background:linear-gradient(135deg,#e8f0dc,#f4f7ed);border:1px solid #d6e3c1;border-radius:22px;box-shadow:0 7px 20px rgba(66,57,42,.07)}
+.delivery-title{margin:0 0 4px;font-size:16px;font-weight:700;color:#526d2d}.delivery-text{margin:0 0 8px;font-size:11px;color:#817967}.delivery-phone{display:inline-block;direction:ltr;text-decoration:none;font-size:20px;font-weight:800;color:#30382b;letter-spacing:.7px}
+@media(max-width:480px){.app{padding-left:10px;padding-right:10px}.hero,.hero img{height:220px}.hero-title{font-size:22px}.category{font-size:11px;padding:7px 12px}.section-title{font-size:18px}.items{gap:9px}.item-content{padding:9px 10px 11px}.item-name{font-size:13px}}
 </style>
 </head>
-
 <body>
-
-<div class="container">
-
-  <!-- LOGO -->
-  <header class="header">
-    <img
-      class="logo"
-      src="images/logo/logo.jpeg"
-      alt="شعار مقهى البيوت"
-    >
-  </header>
-
-
-  <!-- CATEGORY NAVIGATION -->
-  <nav class="categories">
-
-    <a class="category" href="#drinks">
-      <img
-        class="category-image"
-        src="images/مرطبات/عصير برتقال.jpg"
-        alt="مرطبات"
-      >
-      <span>مرطبات</span>
-    </a>
-
-    <a class="category" href="#hot">
-      <img
-        class="category-image"
-        src="images/مشروبات ساخنة/كابتشينو.jpg"
-        alt="مشروبات ساخنة"
-      >
-      <span>مشروبات ساخنة</span>
-    </a>
-
-    <a class="category" href="#breakfast">
-      <img
-        class="category-image"
-        src="images/إفطار صباحي/افطار صباحي.jpg"
-        alt="إفطار صباحي"
-      >
-      <span>إفطار صباحي</span>
-    </a>
-
-    <a class="category" href="#pastries">
-      <img
-        class="category-image"
-        src="images/معجنات/بيتزا كالزوني.jpg"
-        alt="معجنات"
-      >
-      <span>معجنات</span>
-    </a>
-
-  </nav>
-
-
-  <!-- مرطبات -->
-  <section class="menu-section" id="drinks">
-
-    <h2 class="section-title">🥤 مرطبات</h2>
-
-    <div class="items">
-
-      <article class="item">
-        <img
-          class="item-image"
-          src="images/مرطبات/عصير فراولة.jpg"
-          alt="عصير فراولة"
-        >
-
-        <div class="item-content">
-          <h3 class="item-name">عصير فراولة</h3>
-          <div class="item-price">10 دينار</div>
-        </div>
-      </article>
-
-
-      <article class="item">
-        <img
-          class="item-image"
-          src="images/مرطبات/عصير برتقال.jpg"
-          alt="عصير برتقال"
-        >
-
-        <div class="item-content">
-          <h3 class="item-name">عصير برتقال</h3>
-          <div class="item-price">10 دينار</div>
-        </div>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- مشروبات ساخنة -->
-  <section class="menu-section" id="hot">
-
-    <h2 class="section-title">☕ مشروبات ساخنة</h2>
-
-    <div class="items">
-
-      <article class="item">
-        <img
-          class="item-image"
-          src="images/مشروبات ساخنة/سحلب.jpg"
-          alt="سحلب"
-        >
-
-        <div class="item-content">
-          <h3 class="item-name">سحلب</h3>
-          <div class="item-price">8 دينار</div>
-        </div>
-      </article>
-
-
-      <article class="item">
-        <img
-          class="item-image"
-          src="images/مشروبات ساخنة/قهوة عربية.jpg"
-          alt="قهوة عربية"
-        >
-
-        <div class="item-content">
-          <h3 class="item-name">قهوة عربية</h3>
-          <div class="item-price">6 دينار</div>
-        </div>
-      </article>
-
-
-      <article class="item">
-        <img
-          class="item-image"
-          src="images/مشروبات ساخنة/كابتشينو.jpg"
-          alt="كابتشينو"
-        >
-
-        <div class="item-content">
-          <h3 class="item-name">كابتشينو</h3>
-          <div class="item-price">10 دينار</div>
-        </div>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- إفطار صباحي -->
-  <section class="menu-section" id="breakfast">
-
-    <h2 class="section-title">🍳 إفطار صباحي</h2>
-
-    <div class="items">
-
-      <article class="item">
-        <img
-          class="item-image"
-          src="images/إفطار صباحي/افطار صباحي.jpg"
-          alt="إفطار صباحي"
-        >
-
-        <div class="item-content">
-          <h3 class="item-name">إفطار صباحي</h3>
-          <div class="item-price">15 دينار</div>
-        </div>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- معجنات -->
-  <section class="menu-section" id="pastries">
-
-    <h2 class="section-title">🥐 معجنات</h2>
-
-    <div class="items">
-
-      <article class="item">
-        <img
-          class="item-image"
-          src="images/معجنات/بيتزا كالزوني.jpg"
-          alt="بيتزا كالزوني"
-        >
-
-        <div class="item-content">
-          <h3 class="item-name">بيتزا كالزوني</h3>
-          <div class="item-price">12 دينار</div>
-        </div>
-      </article>
-
-
-      <article class="item">
-        <img
-          class="item-image"
-          src="images/معجنات/كالزوني.jpg"
-          alt="كالزوني"
-        >
-
-        <div class="item-content">
-          <h3 class="item-name">كالزوني</h3>
-          <div class="item-price">14 دينار</div>
-        </div>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- DELIVERY -->
-  <section class="delivery-box">
-
-    <h2 class="delivery-title">متوفر توصيل</h2>
-
-    <p class="delivery-text">
-      اطلب الآن واستمتع بخدمات مقهى البيوت
-    </p>
-
-    <a
-      class="delivery-phone"
-      href="tel:0913551525"
-    >
-      0913551525
-    </a>
-
-  </section>
-
+<div class="app">
+<header class="topbar">
+<img class="topbar-logo" src="images/logo/logo.jpeg" alt="شعار مقهى البيوت">
+<div class="brand"><div class="brand-ar">مقهى البيوت</div><div class="brand-en">BAYT CAFE</div></div>
+</header>
+<section class="hero">
+<img src="images/hero.webp" alt="مقهى البيوت">
+<div class="hero-content"><h1 class="hero-title">أهلاً بكم في مقهى البيوت</h1><p class="hero-subtitle">اختياراتكم المفضلة في مكان واحد</p></div>
+</section>
+<nav class="categories">
+<a class="category" href="#drinks">مرطبات</a><a class="category" href="#hot">مشروبات ساخنة</a><a class="category" href="#breakfast">إفطار صباحي</a><a class="category" href="#pastries">معجنات</a>
+</nav>
+<section class="menu-section" id="drinks"><h2 class="section-title">🥤 مرطبات</h2><div class="items">
+<article class="item"><img class="item-image" src="images/مرطبات/عصير فراولة.jpg" alt="عصير فراولة"><div class="item-content"><h3 class="item-name">عصير فراولة</h3></div></article>
+<article class="item"><img class="item-image" src="images/مرطبات/عصير برتقال.jpg" alt="عصير برتقال"><div class="item-content"><h3 class="item-name">عصير برتقال</h3></div></article>
+</div></section>
+<section class="menu-section" id="hot"><h2 class="section-title">☕ مشروبات ساخنة</h2><div class="items">
+<article class="item"><img class="item-image" src="images/مشروبات ساخنة/سحلب.jpg" alt="سحلب"><div class="item-content"><h3 class="item-name">سحلب</h3></div></article>
+<article class="item"><img class="item-image" src="images/مشروبات ساخنة/قهوة عربية.jpg" alt="قهوة عربية"><div class="item-content"><h3 class="item-name">قهوة عربية</h3></div></article>
+<article class="item"><img class="item-image" src="images/مشروبات ساخنة/كابتشينو.jpg" alt="كابتشينو"><div class="item-content"><h3 class="item-name">كابتشينو</h3></div></article>
+</div></section>
+<section class="menu-section" id="breakfast"><h2 class="section-title">🍳 إفطار صباحي</h2><div class="items">
+<article class="item"><img class="item-image" src="images/إفطار صباحي/افطار صباحي.jpg" alt="إفطار صباحي"><div class="item-content"><h3 class="item-name">إفطار صباحي</h3></div></article>
+</div></section>
+<section class="menu-section" id="pastries"><h2 class="section-title">🥐 معجنات</h2><div class="items">
+<article class="item"><img class="item-image" src="images/معجنات/بيتزا كالزوني.jpg" alt="بيتزا كالزوني"><div class="item-content"><h3 class="item-name">بيتزا كالزوني</h3></div></article>
+<article class="item"><img class="item-image" src="images/معجنات/كالزوني.jpg" alt="كالزوني"><div class="item-content"><h3 class="item-name">كالزوني</h3></div></article>
+</div></section>
+<section class="delivery-box"><h2 class="delivery-title">متوفر توصيل</h2><p class="delivery-text">اطلب الآن واستمتع بخدمات مقهى البيوت</p><a class="delivery-phone" href="tel:0913551525">0913551525</a></section>
 </div>
-
 </body>
 </html>
-```
