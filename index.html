@@ -41,12 +41,12 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-
 .back-btn svg{width:20px;height:20px;fill:none;stroke:var(--brown);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .back h2{margin:0;font-size:22px;font-weight:800;color:var(--brown)}
 .items{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 14px}
-.item{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 16px rgba(91,51,32,.09)}
+.item{position:relative;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 7px 18px rgba(91,51,32,.10)}
 .item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-.info{padding:10px 12px 12px}.info h3{padding:0}
+.info{position:relative;margin-top:-12px;padding:15px 12px 12px;background:#fff;border-radius:18px 18px 0 0}.info h3{padding:0}
 .flavors{margin:2px 0 0;font-size:11px;color:#7d7461;line-height:1.6}
-.price{display:flex;align-items:center;justify-content:center;width:48px;height:48px;margin-top:7px;border-radius:50%;background:var(--green);color:#fff;font-size:12px;font-weight:800;line-height:1.1;white-space:nowrap;box-shadow:0 3px 8px rgba(88,122,43,.22)}
-.item h3{margin:0;padding:10px 12px 12px;font-size:14px;font-weight:700;line-height:1.5}
+.price{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-top:7px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:800;line-height:1.1;white-space:nowrap;box-shadow:0 3px 8px rgba(88,122,43,.20)}
+.item h3{margin:0;padding:0 0 4px;font-size:14px;font-weight:700;line-height:1.5}
 .delivery{margin:26px 14px 0;padding:18px;text-align:center;background:#eef1dd;border:1px solid #dbe4c2;border-radius:22px}
 .delivery h2{margin:0 0 4px;font-size:16px;font-weight:700;color:var(--green)}
 .delivery p{margin:0 0 6px;font-size:12px;color:#7d7461}.payment{display:flex;align-items:center;justify-content:center;gap:9px;margin:10px 0 12px;color:var(--brown);font-size:12px;font-weight:700}.payment svg{width:30px;height:30px;fill:none;stroke:var(--green);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.payment span{display:inline-block}
