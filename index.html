@@ -62,13 +62,15 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-
 [hidden]{display:none!important}
 a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
 @media(max-width:560px){
-.hero{height:200px}
-.hero img{width:62%;height:100%;margin:0 auto 0 0;object-position:96% center}
-.hero-copy{right:3.5%;width:34%}
-.hero-copy .en{font-size:22px}
-.hero-copy .ar{font-size:16px;margin-top:7px}
-.hero-copy .cafe{font-size:18px;margin-top:11px}
-.hero-copy::before{font-size:37px}
+.hero{height:188px;border-radius:0 0 28px 28px}
+.hero img{width:68%;height:100%;margin:0 auto 0 0;object-position:91% center;border-radius:0 28px 28px 0;clip-path:inset(0 round 0 28px 28px 0)}
+.hero::after{left:58%;width:48px;top:-7%;height:114%}
+.hero-copy{right:2.5%;width:30%;padding:0 2px}
+.hero-copy .en{font-size:19px;letter-spacing:1.2px}
+.hero-copy .ar{font-size:14px;margin-top:6px;letter-spacing:.6px}
+.hero-copy .cafe{font-size:16px;margin-top:9px;letter-spacing:2px}
+.hero-copy .cafe::after{width:28px;margin-top:7px}
+.hero-copy::before{font-size:25px;letter-spacing:1px}
 }
 @media(max-width:380px){.title{font-size:30px}.card-name{font-size:13px}}
 </style>
