@@ -13,27 +13,21 @@
 body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-serif}
 .app{width:min(100%,560px);margin:auto;padding-bottom:28px;background:var(--cream);min-height:100vh}
 .hero{position:relative;height:250px;overflow:hidden;border-radius:0 0 34px 34px;background:#3a2a20}
-.hero img{width:63%;height:94%;margin:3% auto 0 0;object-fit:cover;object-position:86% center;display:block;border-radius:0 34px 34px 0;clip-path:inset(0 round 0 34px 34px 0);filter:saturate(.94) brightness(.97);}.hero::after{content:"";position:absolute;z-index:2;left:53%;top:-8%;width:62px;height:116%;background:#3a2a20;border-radius:50% 0 0 50% / 50% 0 0 50%;transform:translateX(-50%)}.hero-copy{position:absolute;z-index:3;right:4%;top:50%;transform:translateY(-50%);width:33%;text-align:center;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.4);line-height:1;display:flex;flex-direction:column;align-items:center;justify-content:center}.hero-copy::before{content:"COFFEE";position:absolute;z-index:-1;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Georgia,serif;font-size:40px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.14);white-space:nowrap}.hero-copy .en{display:block;font-family:Georgia,serif;font-size:24px;font-weight:700;font-style:italic;letter-spacing:2px}.hero-copy .ar{display:block;margin-top:8px;font-family:"Cairo",sans-serif;font-size:17px;font-weight:500;letter-spacing:1px}.hero-copy .cafe{display:block;margin-top:12px;font-family:"Trebuchet MS",sans-serif;font-size:19px;font-weight:700;letter-spacing:3px}.hero-copy .cafe::after{content:"";display:block;width:34px;height:1px;margin:10px auto 0;background:rgba(255,255,255,.72);box-shadow:0 0 8px rgba(255,255,255,.18)}
-.logo-wrap{position:relative;z-index:2;width:132px;margin:-72px auto 0}
-.logo-wrap::before,.logo-wrap::after{content:"";position:absolute;top:57px;width:20px;height:20px}
-.logo-wrap::before{left:-20px;background:radial-gradient(circle at 0 0,transparent 20px,var(--cream) 20.5px)}
-.logo-wrap::after{right:-20px;background:radial-gradient(circle at 100% 0,transparent 20px,var(--cream) 20.5px)}
-.logo-arch{width:132px;height:98px;background:var(--cream);border-radius:60px 60px 0 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
-.logo-arch .mark{position:relative;width:92px;height:72px;overflow:hidden;margin-bottom:4px}.logo-arch .mark img{position:absolute;max-width:none;width:392px;left:-150px;top:-47px;mix-blend-mode:multiply;filter:brightness(1.08)}
-.title{margin:0;text-align:center;font-size:34px;font-weight:800;color:var(--brown);line-height:1.25}
-.welcome{display:flex;align-items:center;justify-content:center;gap:10px;margin:1px 24px 19px;color:var(--green);font-size:16px;font-weight:600}
-.welcome::before,.welcome::after{height:1px;opacity:.55}
-.welcome::after{box-shadow:0 0 0 1px rgba(217,119,43,.08)}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.logo-wrap{position:relative;z-index:2;width:140px;margin:-82px auto 0}
+.logo-wrap::before,.logo-wrap::after{content:"";position:absolute;top:60px;width:22px;height:22px}
+.logo-wrap::before{left:-22px;background:radial-gradient(circle at 0 0,transparent 22px,var(--cream) 22.5px)}
+.logo-wrap::after{right:-22px;background:radial-gradient(circle at 100% 0,transparent 22px,var(--cream) 22.5px)}
+.logo-arch{width:140px;height:104px;background:var(--cream);border-radius:64px 64px 0 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.logo-arch .mark{position:relative;width:96px;height:76px;overflow:hidden;margin-bottom:4px}.logo-arch .mark img{position:absolute;max-width:none;width:410px;left:-157px;top:-49px;mix-blend-mode:multiply;filter:brightness(1.08)}
+.title{margin:2px 0 0;text-align:center;font-size:36px;font-weight:800;color:var(--brown);line-height:1.3}
+.welcome{display:flex;align-items:center;justify-content:center;gap:12px;margin:2px 24px 20px;color:var(--green);font-size:17px;font-weight:600}
 .welcome::before,.welcome::after{content:"";flex:0 0 18%;height:2px;background:var(--orange)}
-.menu-heading{text-align:center;margin:0 0 12px;color:var(--brown);font-size:15px;font-weight:700}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 14px}
-.card{position:relative;display:block;text-decoration:none;border-radius:22px;overflow:hidden;background:var(--tint);box-shadow:0 7px 18px rgba(91,51,32,.11);transition:transform .18s ease,box-shadow .18s ease}
-.card:active{transform:scale(.975);box-shadow:0 4px 11px rgba(91,51,32,.10)}
-.item{transition:transform .18s ease,box-shadow .18s ease}
-.item:active{transform:scale(.985);box-shadow:0 4px 12px rgba(91,51,32,.08)}
+.card{display:block;text-decoration:none;border-radius:20px;overflow:hidden;background:var(--tint);box-shadow:0 6px 16px rgba(91,51,32,.1)}
 .card-photo{background:var(--tint);width:100%;aspect-ratio:1.25/1;object-fit:cover;display:block}
-.card-foot{position:relative;display:flex;align-items:center;justify-content:space-between;padding:11px 10px 12px 12px;min-height:54px;background:rgba(255,255,255,.34)}
-.card-foot::before{content:"";position:absolute;top:-22px;right:-8px;width:76px;height:34px;border-radius:50% 0 0 0;background:rgba(255,255,255,.34)}
+.card-foot{position:relative;display:flex;align-items:center;justify-content:space-between;padding:10px 10px 12px 12px;min-height:54px}
+.card-foot::before{content:"";position:absolute;top:-18px;right:-4px;width:64px;height:30px;border-radius:30px 30px 0 0;background:var(--tint)}
 .badge{position:relative;flex:0 0 auto;width:42px;height:42px;margin-top:-26px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center}
 .badge svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .card-name{flex:1;margin:0 10px;font-size:14px;font-weight:700;color:var(--accent-dark)}
@@ -47,104 +41,99 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-
 .back-btn svg{width:20px;height:20px;fill:none;stroke:var(--brown);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .back h2{margin:0;font-size:22px;font-weight:800;color:var(--brown)}
 .items{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 14px}
-.item{position:relative;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 7px 18px rgba(91,51,32,.10)}
+.item{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 16px rgba(91,51,32,.09)}
 .item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-.info{position:relative;margin-top:-12px;padding:15px 12px 12px;background:#fff;border-radius:18px 18px 0 0}.info h3{padding:0}
-.flavors{margin:2px 0 0;font-size:11px;color:#7d7461;line-height:1.6}
-.price{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-top:7px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:800;line-height:1.1;white-space:nowrap;box-shadow:0 3px 8px rgba(88,122,43,.20)}
-.item h3{margin:0;padding:0 0 4px;font-size:14px;font-weight:700;line-height:1.5}
+.item-info{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px 12px}
+.item h3{margin:0;font-size:14px;font-weight:700;line-height:1.5}
+.desc{margin:2px 0 0;font-size:11px;color:#8b8173;line-height:1.5}
+.price{flex:0 0 auto;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:3px 10px;border-radius:999px;white-space:nowrap}
 .delivery{margin:26px 14px 0;padding:18px;text-align:center;background:#eef1dd;border:1px solid #dbe4c2;border-radius:22px}
 .delivery h2{margin:0 0 4px;font-size:16px;font-weight:700;color:var(--green)}
-.delivery p{margin:0 0 6px;font-size:12px;color:#7d7461}.payment{display:flex;align-items:center;justify-content:center;gap:9px;margin:10px 0 12px;color:var(--brown);font-size:12px;font-weight:700}.payment svg{width:30px;height:30px;fill:none;stroke:var(--green);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.payment span{display:inline-block}
-.delivery a{direction:ltr;display:inline-block;text-decoration:none;font-size:20px;font-weight:800;color:var(--brown);letter-spacing:.7px}
-.foot{display:flex;align-items:center;justify-content:center;gap:12px;margin:26px 24px 0;color:var(--green);font-size:12px;font-weight:600;letter-spacing:.2px}
-.location{display:inline-block;margin-top:2px;margin-bottom:2px;text-decoration:none;padding:7px 14px;border-radius:999px;background:#fff;color:var(--brown)!important;border:1px solid #e5dccd;font-size:12px!important;font-weight:700!important}.whatsapp{display:inline-block;margin-top:8px;padding:7px 14px;border-radius:999px;background:#587a2b;color:#fff!important;font-size:12px!important;font-weight:700!important;letter-spacing:0!important}.foot::before,.foot::after{content:"";flex:1;height:1px;background:var(--green);opacity:.7}
+.delivery p{margin:0 0 6px;font-size:12px;color:#7d7461}
+.btn{display:inline-block;margin:6px 4px 0;padding:8px 16px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700}
+.location{background:#fff;color:var(--brown);border:1px solid #e5dccd}
+.whatsapp{background:var(--green);color:#fff}
+.sub{margin:-2px 0 6px;text-align:center;font-size:14px;font-weight:600;color:var(--orange)}
+.sub .ar{letter-spacing:.14em;text-transform:uppercase}
+.langbar{position:sticky;top:0;z-index:50;height:0}
+.lang{position:absolute;top:12px;left:12px;padding:6px 14px;border:0;border-radius:999px;background:rgba(255,255,255,.92);color:var(--brown);font:700 13px "Cairo",sans-serif;box-shadow:0 3px 10px rgba(0,0,0,.2);cursor:pointer}
+.en{display:none}html[lang=en] .ar{display:none}html[lang=en] .en{display:inline}
+html[dir=ltr] .lang{left:auto;right:12px}
+html[dir=ltr] .chev,html[dir=ltr] .back-btn svg{transform:scaleX(-1)}
+html[dir=ltr] .card-foot::before{right:auto;left:-4px}
+.foot{display:flex;align-items:center;justify-content:center;gap:12px;margin:24px 24px 0;color:#2b6aa3;font-size:13px}
+.foot::before,.foot::after{content:"";flex:1;height:1px;background:var(--green);opacity:.7}
 [hidden]{display:none!important}
 a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
-@media(max-width:560px){
-.hero{height:188px;border-radius:0 0 28px 28px}
-.hero img{width:68%;height:100%;margin:0 auto 0 0;object-position:91% center;border-radius:0 28px 28px 0;clip-path:inset(0 round 0 28px 28px 0)}
-.hero::after{left:58%;width:48px;top:-7%;height:114%}
-.hero-copy{right:2.5%;width:30%;padding:0 2px}
-.hero-copy .en{font-size:19px;letter-spacing:1.2px}
-.hero-copy .ar{font-size:14px;margin-top:6px;letter-spacing:.6px}
-.hero-copy .cafe{font-size:16px;margin-top:9px;letter-spacing:2px}
-.hero-copy .cafe::after{width:28px;margin-top:7px}
-.hero-copy::before{font-size:25px;letter-spacing:1px}
-}
 @media(max-width:380px){.title{font-size:30px}.card-name{font-size:13px}}
 </style>
 </head>
 <body>
 <div class="app">
+<div class="langbar"><button class="lang" id="lang" type="button">EN</button></div>
 
 <div id="home">
-<header class="hero"><img src="images/hero.webp" alt="مقهى البيوت"><div class="hero-copy"><span class="en">Coffee</span><span class="ar">قهوة</span><span class="cafe">Cafe</span></div></header>
+<header class="hero"><img src="images/hero.webp" alt="مقهى البيوت"></header>
 <div class="logo-wrap"><div class="logo-arch"><div class="mark"><img src="images/logo/logo.jpeg" alt="شعار مقهى البيوت"></div></div></div>
-<h1 class="title">مقهى البيوت</h1>
-<div class="welcome">أهلاً بكم</div>
-<div class="menu-heading">استكشف قائمتنا</div>
+<h1 class="title"><span class="ar">مقهى البيوت</span><span class="en">Houses Cafe</span></h1>
+<p class="sub"><span class="ar">Houses Cafe</span><span class="en">مقهى البيوت</span></p>
+<div class="welcome"><span class="ar">أهلاً بكم</span><span class="en">Welcome</span></div>
 
 <nav class="grid">
 <a class="card c-drinks" href="#drinks"><img class="card-photo" src="images/مرطبات/عصير فراولة.jpg" alt="">
-<div class="card-foot"><span class="badge"><svg viewBox="0 0 24 24"><path d="M7 8h10l-1 12H8L7 8z"/><path d="M12 8l2-5h3"/><path d="M9 13h6"/></svg></span><span class="card-name">مرطبات</span><svg class="chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></a>
+<div class="card-foot"><span class="badge"><svg viewBox="0 0 24 24"><path d="M7 8h10l-1 12H8L7 8z"/><path d="M12 8l2-5h3"/><path d="M9 13h6"/></svg></span><span class="card-name"><span class="ar">مرطبات</span><span class="en">Cold Drinks</span></span><svg class="chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></a>
 
 <a class="card c-hot" href="#hot"><img class="card-photo" src="images/مشروبات ساخنة/كابتشينو.jpg" alt="">
-<div class="card-foot"><span class="badge"><svg viewBox="0 0 24 24"><path d="M5 11h12v4a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5v-4z"/><path d="M17 12h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M9 3c-1 1.2 1 2.3 0 3.5M13 3c-1 1.2 1 2.3 0 3.5"/></svg></span><span class="card-name">مشروبات ساخنة</span><svg class="chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></a>
+<div class="card-foot"><span class="badge"><svg viewBox="0 0 24 24"><path d="M5 11h12v4a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5v-4z"/><path d="M17 12h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M9 3c-1 1.2 1 2.3 0 3.5M13 3c-1 1.2 1 2.3 0 3.5"/></svg></span><span class="card-name"><span class="ar">مشروبات ساخنة</span><span class="en">Hot Drinks</span></span><svg class="chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></a>
 
 <a class="card c-breakfast" href="#breakfast"><img class="card-photo" src="images/إفطار صباحي/افطار صباحي.jpg" alt="">
-<div class="card-foot"><span class="badge"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="9" ry="6"/><circle cx="12" cy="13" r="2.8"/></svg></span><span class="card-name">إفطار صباحي</span><svg class="chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></a>
+<div class="card-foot"><span class="badge"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="9" ry="6"/><circle cx="12" cy="13" r="2.8"/></svg></span><span class="card-name"><span class="ar">إفطار صباحي</span><span class="en">Breakfast</span></span><svg class="chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></a>
 
 <a class="card c-pastries" href="#pastries"><img class="card-photo" style="object-position:75% center" src="images/معجنات/بيتزا كالزوني.jpg" alt="">
-<div class="card-foot"><span class="badge"><svg viewBox="0 0 24 24"><path d="M3 14a9 7 0 0 1 18 0H3z"/><path d="M3 17h18M5 20h14"/></svg></span><span class="card-name">معجنات</span><svg class="chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></a>
+<div class="card-foot"><span class="badge"><svg viewBox="0 0 24 24"><path d="M3 14a9 7 0 0 1 18 0H3z"/><path d="M3 17h18M5 20h14"/></svg></span><span class="card-name"><span class="ar">معجنات</span><span class="en">Pastries</span></span><svg class="chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></a>
 </nav>
 </div>
 
 <section id="drinks" class="view" hidden>
-<div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>مرطبات</h2></div>
+<div class="back"><button class="back-btn" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2><span class="ar">مرطبات</span><span class="en">Cold Drinks</span></h2></div>
 <div class="items">
-<article class="item"><img src="images/مرطبات/عصير فراولة.jpg" alt="عصير فراولة"><div class="info"><h3>عصير فراولة</h3><p class="flavors">عصير فراولة طازج ومنعش</p><span class="price">12 د.ل</span></div></article>
-<article class="item"><img src="images/مرطبات/عصير برتقال.jpg" alt="عصير برتقال"><div class="info"><h3>عصير برتقال</h3><p class="flavors">عصير برتقال طازج ومنعش</p><span class="price">10 د.ل</span></div></article>
-<article class="item"><img src="images/مرطبات/milkshake.webp" alt="ميلك شيك"><div class="info"><h3>ميلك شيك</h3><p class="flavors">بلوبيري · شوكولاتة · موز</p><span class="price">20 د.ل</span></div></article>
+<article class="item"><img src="images/مرطبات/عصير فراولة.jpg" alt="عصير فراولة"><div class="item-info"><div><h3><span class="ar">عصير فراولة</span><span class="en">Strawberry Juice</span></h3><p class="desc"><span class="ar">عصير فراولة طازج</span><span class="en">Fresh strawberry juice</span></p></div><span class="price"><span class="ar">12 د.ل</span><span class="en">12 LYD</span></span></div></article>
+<article class="item"><img src="images/مرطبات/عصير برتقال.jpg" alt="عصير برتقال"><div class="item-info"><div><h3><span class="ar">عصير برتقال</span><span class="en">Orange Juice</span></h3><p class="desc"><span class="ar">عصير برتقال طازج</span><span class="en">Fresh orange juice</span></p></div><span class="price"><span class="ar">10 د.ل</span><span class="en">10 LYD</span></span></div></article>
+<article class="item"><img src="images/مرطبات/milkshake.webp" alt="ميلك شيك"><div class="item-info"><div><h3><span class="ar">ميلك شيك</span><span class="en">Milkshake</span></h3><p class="desc"><span class="ar">موز · بلوبيري · شوكولاتة</span><span class="en">Banana · Blueberry · Chocolate</span></p></div><span class="price"><span class="ar">20 د.ل</span><span class="en">20 LYD</span></span></div></article>
 </div></section>
-
 <section id="hot" class="view" hidden>
-<div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>مشروبات ساخنة</h2></div>
+<div class="back"><button class="back-btn" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2><span class="ar">مشروبات ساخنة</span><span class="en">Hot Drinks</span></h2></div>
 <div class="items">
-<article class="item"><img src="images/مشروبات ساخنة/سحلب.jpg" alt="سحلب"><div class="info"><h3>سحلب</h3><p class="flavors">مشروب كريمي دافئ بنكهة السحلب</p><span class="price">8 د.ل</span></div></article>
-<article class="item"><img src="images/مشروبات ساخنة/قهوة عربية.jpg" alt="قهوة عربية"><div class="info"><h3>قهوة عربية</h3><p class="flavors">قهوة عربية أصيلة برائحة عطرة</p><span class="price">7 د.ل</span></div></article>
-<article class="item"><img src="images/مشروبات ساخنة/كابتشينو.jpg" alt="كابتشينو"><div class="info"><h3>كابتشينو</h3><p class="flavors">قهوة كريمية مع رغوة حليب ناعمة</p><span class="price">10 د.ل</span></div></article>
+<article class="item"><img src="images/مشروبات ساخنة/سحلب.jpg" alt="سحلب"><div class="item-info"><div><h3><span class="ar">سحلب</span><span class="en">Sahlab</span></h3><p class="desc"><span class="ar">مشروب حليب ساخن</span><span class="en">Hot milky drink</span></p></div><span class="price"><span class="ar">8 د.ل</span><span class="en">8 LYD</span></span></div></article>
+<article class="item"><img src="images/مشروبات ساخنة/قهوة عربية.jpg" alt="قهوة عربية"><div class="item-info"><div><h3><span class="ar">قهوة عربية</span><span class="en">Arabic Coffee</span></h3></div><span class="price"><span class="ar">7 د.ل</span><span class="en">7 LYD</span></span></div></article>
+<article class="item"><img src="images/مشروبات ساخنة/كابتشينو.jpg" alt="كابتشينو"><div class="item-info"><div><h3><span class="ar">كابتشينو</span><span class="en">Cappuccino</span></h3></div><span class="price"><span class="ar">10 د.ل</span><span class="en">10 LYD</span></span></div></article>
 </div></section>
-
 <section id="breakfast" class="view" hidden>
-<div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>إفطار صباحي</h2></div>
+<div class="back"><button class="back-btn" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2><span class="ar">إفطار صباحي</span><span class="en">Breakfast</span></h2></div>
 <div class="items">
-<article class="item"><img src="images/إفطار صباحي/افطار صباحي.jpg" alt="إفطار صباحي"><div class="info"><h3>إفطار صباحي</h3><p class="flavors">شكشوكة، جبنة، زيتون، خبز، فلافل وقلاية لحم</p><span class="price">25 د.ل</span></div></article>
+<article class="item"><img src="images/إفطار صباحي/افطار صباحي.jpg" alt="إفطار صباحي"><div class="item-info"><div><h3><span class="ar">إفطار صباحي</span><span class="en">Breakfast</span></h3><p class="desc"><span class="ar">شكشوكة، جبنة، زيتون، خبز، قطع فلافل، قلاية لحم</span><span class="en">Shakshuka, cheese, olives, bread, falafel, meat skillet</span></p></div><span class="price"><span class="ar">25 د.ل</span><span class="en">25 LYD</span></span></div></article>
 </div></section>
-
 <section id="pastries" class="view" hidden>
-<div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>معجنات</h2></div>
+<div class="back"><button class="back-btn" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2><span class="ar">معجنات</span><span class="en">Pastries</span></h2></div>
 <div class="items">
-<article class="item"><img src="images/معجنات/بيتزا كالزوني.jpg" alt="بيتزا كالزوني"><div class="info"><h3>بيتزا كالزوني</h3><p class="flavors">دجاج، موزاريلا، صلصة طماطم وزيتون</p><span class="price">18 د.ل</span></div></article>
-<article class="item"><img src="images/معجنات/كالزوني.jpg" alt="كالزوني"><div class="info"><h3>كالزوني</h3><p class="flavors">دجاج، موزاريلا، صلصة طماطم وزيتون</p><span class="price">16 د.ل</span></div></article>
-<article class="item"><img src="images/معجنات/pizza.webp" alt="بيتزا"><div class="info"><h3>بيتزا</h3><p class="flavors">جبنة موزاريلا، زيتون، فلفل حلو مع رشة زعتر</p><span class="price">25 د.ل</span></div></article>
+<article class="item"><img src="images/معجنات/بيتزا كالزوني.jpg" alt="بيتزا كالزوني"><div class="item-info"><div><h3><span class="ar">بيتزا كالزوني</span><span class="en">Calzone Pizza</span></h3><p class="desc"><span class="ar">دجاج، جبنة موزاريلا، صلصة طماطم وزيتون</span><span class="en">Chicken, mozzarella, tomato sauce and olives</span></p></div><span class="price"><span class="ar">18 د.ل</span><span class="en">18 LYD</span></span></div></article>
+<article class="item"><img src="images/معجنات/كالزوني.jpg" alt="كالزوني"><div class="item-info"><div><h3><span class="ar">كالزوني</span><span class="en">Calzone</span></h3><p class="desc"><span class="ar">دجاج، جبنة موزاريلا، صلصة طماطم وزيتون</span><span class="en">Chicken, mozzarella, tomato sauce and olives</span></p></div><span class="price"><span class="ar">16 د.ل</span><span class="en">16 LYD</span></span></div></article>
+<article class="item"><img src="images/معجنات/pizza.webp" alt="بيتزا"><div class="item-info"><div><h3><span class="ar">بيتزا</span><span class="en">Pizza</span></h3><p class="desc"><span class="ar">جبنة موزاريلا، زيتون، فلفل حلو</span><span class="en">Mozzarella, olives, sweet pepper</span></p></div><span class="price"><span class="ar">25 د.ل</span><span class="en">25 LYD</span></span></div></article>
 </div></section>
 
-<section class="delivery"><h2>متوفر توصيل</h2><p>اطلب الآن واستمتع بخدمات مقهى البيوت</p><div class="payment"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="3" width="18" height="26" rx="3"></rect><rect x="10" y="7" width="12" height="6" rx="1"></rect><path d="M10 18h12M10 22h3M15 22h3M20 22h2M10 26h4"></path></svg><span>نقبل جميع طرق الدفع</span></div><a class="location" href="https://www.google.com/maps/search/?api=1&query=32.7176465,12.7997255" target="_blank" rel="noopener">📍 موقعنا</a><a class="whatsapp" href="https://wa.me/218913551525" target="_blank" rel="noopener">طلب عبر واتساب</a></section>
-<div class="foot">مذاق لذيذ .. في كل لحظة</div>
+<section class="delivery"><h2><span class="ar">متوفر توصيل</span><span class="en">Delivery available</span></h2><p><span class="ar">اطلب الآن واستمتع بخدمات مقهى البيوت</span><span class="en">Order now and enjoy Houses Cafe</span></p><a class="btn location" href="https://www.google.com/maps/search/?api=1&query=32.7176465,12.7997255" target="_blank" rel="noopener"><span class="ar">📍 موقعنا</span><span class="en">📍 Our Location</span></a><a class="btn whatsapp" href="https://wa.me/218913551525" target="_blank" rel="noopener"><span class="ar">طلب عبر واتساب</span><span class="en">Order via WhatsApp</span></a></section>
+<div class="foot"><span class="ar">مذاق لذيذ .. في كل لحظة</span><span class="en">Delicious taste in every moment</span></div>
 </div>
 
 <script>
 (function(){
-var home=document.getElementById('home'),views=document.querySelectorAll('.view');
-function route(){
-var id=location.hash.slice(1),found=false;
-views.forEach(function(v){var on=v.id===id;v.hidden=!on;if(on)found=true});
-home.hidden=found;window.scrollTo(0,0);
-}
-document.querySelectorAll('.back-btn').forEach(function(b){
-b.addEventListener('click',function(){history.length>1?history.back():(location.hash='')});
-});
+var home=document.getElementById('home'),views=document.querySelectorAll('.view'),btn=document.getElementById('lang'),root=document.documentElement;
+function route(){var id=location.hash.slice(1),f=false;views.forEach(function(v){var on=v.id===id;v.hidden=!on;if(on)f=true});home.hidden=f;window.scrollTo(0,0)}
+function setLang(l){root.lang=l;root.dir=l==='en'?'ltr':'rtl';btn.textContent=l==='en'?'\u0639\u0631\u0628\u064a':'EN';document.title=l==='en'?'Houses Cafe':'\u0645\u0642\u0647\u0649 \u0627\u0644\u0628\u064a\u0648\u062a';try{localStorage.setItem('lang',l)}catch(e){}}
+var saved='ar';try{saved=localStorage.getItem('lang')||'ar'}catch(e){}
+setLang(saved==='en'?'en':'ar');
+btn.addEventListener('click',function(){setLang(root.lang==='en'?'ar':'en')});
+document.querySelectorAll('.back-btn').forEach(function(b){b.addEventListener('click',function(){history.length>1?history.back():(location.hash='')})});
 window.addEventListener('hashchange',route);route();
 })();
 </script>
