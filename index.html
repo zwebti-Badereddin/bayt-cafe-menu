@@ -21,7 +21,9 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-
 .logo-arch{width:132px;height:98px;background:var(--cream);border-radius:60px 60px 0 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
 .logo-arch .mark{position:relative;width:92px;height:72px;overflow:hidden;margin-bottom:4px}.logo-arch .mark img{position:absolute;max-width:none;width:392px;left:-150px;top:-47px;mix-blend-mode:multiply;filter:brightness(1.08)}
 .title{margin:0;text-align:center;font-size:34px;font-weight:800;color:var(--brown);line-height:1.25}
-.welcome{display:flex;align-items:center;justify-content:center;gap:11px;margin:1px 24px 18px;color:var(--green);font-size:16px;font-weight:600}
+.welcome{display:flex;align-items:center;justify-content:center;gap:10px;margin:1px 24px 19px;color:var(--green);font-size:16px;font-weight:600}
+.welcome::before,.welcome::after{height:1px;opacity:.55}
+.welcome::after{box-shadow:0 0 0 1px rgba(217,119,43,.08)}
 .welcome::before,.welcome::after{content:"";flex:0 0 18%;height:2px;background:var(--orange)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 14px}
 .card{position:relative;display:block;text-decoration:none;border-radius:22px;overflow:hidden;background:var(--tint);box-shadow:0 7px 18px rgba(91,51,32,.11);transition:transform .18s ease,box-shadow .18s ease}
