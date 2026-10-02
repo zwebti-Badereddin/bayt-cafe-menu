@@ -24,7 +24,10 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-
 .welcome{display:flex;align-items:center;justify-content:center;gap:11px;margin:1px 24px 18px;color:var(--green);font-size:16px;font-weight:600}
 .welcome::before,.welcome::after{content:"";flex:0 0 18%;height:2px;background:var(--orange)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 14px}
-.card{position:relative;display:block;text-decoration:none;border-radius:22px;overflow:hidden;background:var(--tint);box-shadow:0 7px 18px rgba(91,51,32,.11);transition:transform .2s ease,box-shadow .2s ease}
+.card{position:relative;display:block;text-decoration:none;border-radius:22px;overflow:hidden;background:var(--tint);box-shadow:0 7px 18px rgba(91,51,32,.11);transition:transform .18s ease,box-shadow .18s ease}
+.card:active{transform:scale(.975);box-shadow:0 4px 11px rgba(91,51,32,.10)}
+.item{transition:transform .18s ease,box-shadow .18s ease}
+.item:active{transform:scale(.985);box-shadow:0 4px 12px rgba(91,51,32,.08)}
 .card-photo{background:var(--tint);width:100%;aspect-ratio:1.25/1;object-fit:cover;display:block}
 .card-foot{position:relative;display:flex;align-items:center;justify-content:space-between;padding:11px 10px 12px 12px;min-height:54px;background:rgba(255,255,255,.34)}
 .card-foot::before{content:"";position:absolute;top:-22px;right:-8px;width:76px;height:34px;border-radius:50% 0 0 0;background:rgba(255,255,255,.34)}
