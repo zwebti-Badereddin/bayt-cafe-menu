@@ -12,11 +12,14 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-serif}
 .app{width:min(100%,560px);margin:auto;padding-bottom:28px;background:var(--cream);min-height:100vh}
-.hero{position:relative;height:auto;aspect-ratio:1200/667;overflow:hidden;border-radius:28px;background:#3a2a20}
-.hero img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block;filter:brightness(1.04) contrast(1.08) saturate(1.06)}
-.hero::after{content:"";position:absolute;left:-20%;right:-20%;bottom:-46px;height:92px;border-radius:50%;background:var(--cream)}
-.logo-arch{position:relative;z-index:2;width:140px;height:104px;margin:-82px auto 0;background:var(--cream);border-radius:64px 64px 0 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
-.logo-arch .mark{position:relative;width:96px;height:76px;overflow:hidden;margin-bottom:6px}.logo-arch .mark img{position:absolute;max-width:none;width:410px;left:-157px;top:-49px;mix-blend-mode:multiply;filter:brightness(1.08)}
+.hero{position:relative;height:250px;overflow:hidden;border-radius:0 0 34px 34px;background:#3a2a20}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.logo-wrap{position:relative;z-index:2;width:140px;margin:-82px auto 0}
+.logo-wrap::before,.logo-wrap::after{content:"";position:absolute;top:60px;width:22px;height:22px}
+.logo-wrap::before{left:-22px;background:radial-gradient(circle at 0 0,transparent 22px,var(--cream) 22.5px)}
+.logo-wrap::after{right:-22px;background:radial-gradient(circle at 100% 0,transparent 22px,var(--cream) 22.5px)}
+.logo-arch{width:140px;height:104px;background:var(--cream);border-radius:64px 64px 0 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.logo-arch .mark{position:relative;width:96px;height:76px;overflow:hidden;margin-bottom:4px}.logo-arch .mark img{position:absolute;max-width:none;width:410px;left:-157px;top:-49px;mix-blend-mode:multiply;filter:brightness(1.08)}
 .title{margin:2px 0 0;text-align:center;font-size:36px;font-weight:800;color:var(--brown);line-height:1.3}
 .welcome{display:flex;align-items:center;justify-content:center;gap:12px;margin:2px 24px 20px;color:var(--green);font-size:17px;font-weight:600}
 .welcome::before,.welcome::after{content:"";flex:0 0 18%;height:2px;background:var(--orange)}
@@ -39,14 +42,17 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-
 .back h2{margin:0;font-size:22px;font-weight:800;color:var(--brown)}
 .items{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 14px}
 .item{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 16px rgba(91,51,32,.09)}
-.item img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
-.item-info{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px 12px}.item h3{margin:0;padding:0;font-size:14px;font-weight:700;line-height:1.5}.price{flex:0 0 auto;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:3px 9px;border-radius:999px;white-space:nowrap}.desc{margin:2px 0 0;font-size:10px;color:#8b8173;line-height:1.5}
+.item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.info{padding:10px 12px 12px}.info h3{padding:0}
+.flavors{margin:2px 0 0;font-size:12px;color:#7d7461;line-height:1.6}
+.price{display:inline-block;margin-top:6px;padding:2px 12px;border-radius:999px;background:#f5ece1;color:var(--brown);font-size:13px;font-weight:800}
+.item h3{margin:0;padding:10px 12px 12px;font-size:14px;font-weight:700;line-height:1.5}
 .delivery{margin:26px 14px 0;padding:18px;text-align:center;background:#eef1dd;border:1px solid #dbe4c2;border-radius:22px}
 .delivery h2{margin:0 0 4px;font-size:16px;font-weight:700;color:var(--green)}
 .delivery p{margin:0 0 6px;font-size:12px;color:#7d7461}
 .delivery a{direction:ltr;display:inline-block;text-decoration:none;font-size:20px;font-weight:800;color:var(--brown);letter-spacing:.7px}
 .foot{display:flex;align-items:center;justify-content:center;gap:12px;margin:24px 24px 0;color:#2b6aa3;font-size:13px}
-.location{display:inline-block;margin-top:2px;margin-bottom:2px;text-decoration:none;padding:7px 14px;border-radius:999px;background:#fff;color:var(--brown)!important;border:1px solid #e5dccd;font-size:12px!important;font-weight:700!important}.whatsapp{display:inline-block;margin-top:8px;padding:7px 14px;border-radius:999px;background:#587a2b;color:#fff!important;font-size:12px!important;font-weight:700!important;letter-spacing:0!important}.foot::before,.foot::after{content:"";flex:1;height:1px;background:var(--green);opacity:.7}
+.foot::before,.foot::after{content:"";flex:1;height:1px;background:var(--green);opacity:.7}
 [hidden]{display:none!important}
 a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
 @media(max-width:380px){.title{font-size:30px}.card-name{font-size:13px}}
@@ -57,7 +63,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-off
 
 <div id="home">
 <header class="hero"><img src="images/hero.webp" alt="مقهى البيوت"></header>
-<div class="logo-arch"><div class="mark"><img src="images/logo/logo.jpeg" alt="شعار مقهى البيوت"></div></div>
+<div class="logo-wrap"><div class="logo-arch"><div class="mark"><img src="images/logo/logo.jpeg" alt="شعار مقهى البيوت"></div></div></div>
 <h1 class="title">مقهى البيوت</h1>
 <div class="welcome">أهلاً بكم</div>
 
@@ -79,34 +85,35 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-off
 <section id="drinks" class="view" hidden>
 <div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>مرطبات</h2></div>
 <div class="items">
-<article class="item"><img src="images/مرطبات/عصير فراولة.jpg" alt="عصير فراولة"><div class="item-info"><div><h3>عصير فراولة</h3><p class="desc">عصير فراولة طازج</p></div><span class="price">12 د.ل</span></div></article>
-<article class="item"><img src="images/مرطبات/عصير برتقال.jpg" alt="عصير برتقال"><div class="item-info"><div><h3>عصير برتقال</h3><p class="desc">عصير برتقال طازج</p></div><span class="price">10 د.ل</span></div></article>
+<article class="item"><img src="images/مرطبات/عصير فراولة.jpg" alt="عصير فراولة"><h3>عصير فراولة</h3></article>
+<article class="item"><img src="images/مرطبات/عصير برتقال.jpg" alt="عصير برتقال"><h3>عصير برتقال</h3></article>
+<article class="item"><img src="images/مرطبات/milkshake.webp" alt="ميلك شيك"><div class="info"><h3>ميلك شيك</h3><p class="flavors">موز · بلوبيري · شوكولاتة</p><span class="price">20</span></div></article>
 </div></section>
 
 <section id="hot" class="view" hidden>
 <div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>مشروبات ساخنة</h2></div>
 <div class="items">
-<article class="item"><img src="images/مشروبات ساخنة/سحلب.jpg" alt="سحلب"><div class="item-info"><h3>سحلب</h3><span class="price">8 د.ل</span></div></article>
-<article class="item"><img src="images/مشروبات ساخنة/قهوة عربية.jpg" alt="قهوة عربية"><div class="item-info"><h3>قهوة عربية</h3><span class="price">7 د.ل</span></div></article>
-<article class="item"><img src="images/مشروبات ساخنة/كابتشينو.jpg" alt="كابتشينو"><div class="item-info"><h3>كابتشينو</h3><span class="price">10 د.ل</span></div></article>
+<article class="item"><img src="images/مشروبات ساخنة/سحلب.jpg" alt="سحلب"><h3>سحلب</h3></article>
+<article class="item"><img src="images/مشروبات ساخنة/قهوة عربية.jpg" alt="قهوة عربية"><h3>قهوة عربية</h3></article>
+<article class="item"><img src="images/مشروبات ساخنة/كابتشينو.jpg" alt="كابتشينو"><h3>كابتشينو</h3></article>
 </div></section>
 
 <section id="breakfast" class="view" hidden>
 <div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>إفطار صباحي</h2></div>
 <div class="items">
-<article class="item"><img src="images/إفطار صباحي/افطار صباحي.jpg" alt="إفطار صباحي"><div class="item-info"><div><h3>إفطار صباحي</h3><p class="desc">شكشوكة، جبنة، زيتون، خبز، قطع فلافل، قلاية لحم</p></div><span class="price">25 د.ل</span></div></article>
+<article class="item"><img src="images/إفطار صباحي/افطار صباحي.jpg" alt="إفطار صباحي"><h3>إفطار صباحي</h3></article>
 </div></section>
 
 <section id="pastries" class="view" hidden>
 <div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>معجنات</h2></div>
 <div class="items">
-<article class="item"><img src="images/معجنات/بيتزا كالزوني.jpg" alt="بيتزا كالزوني"><div class="item-info"><div><h3>بيتزا كالزوني</h3><p class="desc">دجاج، جبنة موزاريلا، صلصة طماطم وزيتون</p></div><span class="price">18 د.ل</span></div></article>
-<article class="item"><img src="images/معجنات/كالزوني.jpg" alt="كالزوني"><div class="item-info"><div><h3>كالزوني</h3><p class="desc">دجاج، جبنة موزاريلا، صلصة طماطم وزيتون</p></div><span class="price">16 د.ل</span></div></article>
+<article class="item"><img src="images/معجنات/بيتزا كالزوني.jpg" alt="بيتزا كالزوني"><h3>بيتزا كالزوني</h3></article>
+<article class="item"><img src="images/معجنات/كالزوني.jpg" alt="كالزوني"><h3>كالزوني</h3></article>
+<article class="item"><img src="images/معجنات/pizza.webp" alt="بيتزا"><div class="info"><h3>بيتزا</h3><span class="price">25</span></div></article>
 </div></section>
 
-<div class="foot">مذاق لذيذ في كل لحظة</div>
-<section class="delivery"><h2>متوفر توصيل</h2><p>اطلب الآن واستمتع بخدمات مقهى البيوت</p><a class="location" href="https://www.google.com/maps/search/?api=1&query=32.7176465,12.7997255" target="_blank" rel="noopener">📍 موقعنا</a><a class="whatsapp" href="https://wa.me/218913551525" target="_blank" rel="noopener">طلب عبر واتساب</a></section>
-
+<section class="delivery"><h2>متوفر توصيل</h2><p>اطلب الآن واستمتع بخدمات مقهى البيوت</p><a href="tel:0913551525">0913551525</a></section>
+<div class="foot">مذاق لذيذ .. في كل لحظة</div>
 </div>
 
 <script>
