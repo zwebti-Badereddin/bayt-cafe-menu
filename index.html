@@ -13,7 +13,13 @@
 body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-serif}
 .app{width:min(100%,560px);margin:auto;padding-bottom:28px;background:var(--cream);min-height:100vh}
 .hero{position:relative;height:230px;overflow:hidden;border-radius:0 0 34px 34px;background:#4b2e1c}
-.hero-photo{position:absolute;inset-block:0;inset-inline-start:0;width:100%;height:100%;object-fit:cover;object-position:50% center;display:block}
+.hero-photo{position:absolute;inset-block:0;inset-inline-end:0;width:64%;height:100%;object-fit:cover;object-position:6% center;display:block}
+.hero-copy{position:absolute;z-index:2;inset-block:0;inset-inline-start:0;width:42%;background:#4b2e1c;border-start-end-radius:96px;border-end-end-radius:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 8px 40px;color:#fff;text-align:center;overflow:hidden}
+.hero-copy::before{content:"COFFEE";position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);font:700 clamp(26px,8vw,40px) Georgia,serif;letter-spacing:2px;color:rgba(255,255,255,.07);white-space:nowrap}
+.hc-top{position:relative;font:italic 700 clamp(22px,6.4vw,30px) Georgia,serif;letter-spacing:1.5px}
+.hc-mid{position:relative;margin-top:6px;font:500 clamp(15px,4.4vw,19px) "Cairo",sans-serif;letter-spacing:.5px;color:#f0d9bf}
+.hc-bot{position:relative;margin-top:8px;font:700 clamp(15px,4.4vw,19px) "Trebuchet MS",sans-serif;letter-spacing:3px}
+.hc-bot::after{content:"";display:block;width:32px;height:1px;margin:9px auto 0;background:rgba(255,255,255,.7)}
 .logo-wrap{position:relative;z-index:2;width:140px;margin:-82px auto 0}
 .logo-wrap::before,.logo-wrap::after{content:"";position:absolute;top:60px;width:22px;height:22px}
 .logo-wrap::before{left:-22px;background:radial-gradient(circle at 0 0,transparent 22px,var(--cream) 22.5px)}
@@ -56,9 +62,9 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-
 .sub{margin:-2px 0 6px;text-align:center;font-size:14px;font-weight:600;color:var(--orange)}
 .sub .ar{letter-spacing:.14em;text-transform:uppercase}
 .langbar{position:sticky;top:0;z-index:50;height:0}
-.lang{position:absolute;top:12px;left:12px;padding:6px 14px;border:0;border-radius:999px;background:rgba(255,255,255,.92);color:var(--brown);font:700 13px "Cairo",sans-serif;box-shadow:0 3px 10px rgba(0,0,0,.2);cursor:pointer}
+.lang{position:absolute;top:12px;inset-inline-start:12px;padding:6px 14px;border:0;border-radius:999px;background:rgba(255,255,255,.92);color:var(--brown);font:700 13px "Cairo",sans-serif;box-shadow:0 3px 10px rgba(0,0,0,.2);cursor:pointer}
 .en{display:none}html[lang=en] .ar{display:none}html[lang=en] .en{display:inline}
-html[dir=ltr] .lang{left:auto;right:12px}
+.in-view .lang{inset-inline-start:auto;inset-inline-end:12px}
 html[dir=ltr] .chev,html[dir=ltr] .back-btn svg{transform:scaleX(-1)}
 html[dir=ltr] .card-foot::before{right:auto;left:-4px}
 .foot{display:flex;align-items:center;justify-content:center;gap:12px;margin:24px 24px 0;color:#2b6aa3;font-size:13px}
@@ -73,7 +79,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-off
 <div class="langbar"><button class="lang" id="lang" type="button">EN</button></div>
 
 <div id="home">
-<header class="hero"><img class="hero-photo" src="images/hero.webp" alt="مقهى البيوت"></header>
+<header class="hero"><img class="hero-photo" src="images/hero.webp" alt="مقهى البيوت"><div class="hero-copy" dir="ltr"><span class="hc-top">Coffee</span><span class="hc-mid">مقهى</span><span class="hc-bot">Cafe</span></div></header>
 <div class="logo-wrap"><div class="logo-arch"><div class="mark"><img src="images/logo/logo.jpeg" alt="شعار مقهى البيوت"></div></div></div>
 <h1 class="title"><span class="ar">مقهى البيوت</span><span class="en">Houses Cafe</span></h1>
 <p class="sub"><span class="ar">Houses Cafe</span><span class="en">مقهى البيوت</span></p>
@@ -128,7 +134,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-off
 <script>
 (function(){
 var home=document.getElementById('home'),views=document.querySelectorAll('.view'),btn=document.getElementById('lang'),root=document.documentElement;
-function route(){var id=location.hash.slice(1),f=false;views.forEach(function(v){var on=v.id===id;v.hidden=!on;if(on)f=true});home.hidden=f;window.scrollTo(0,0)}
+function route(){var id=location.hash.slice(1),f=false;views.forEach(function(v){var on=v.id===id;v.hidden=!on;if(on)f=true});home.hidden=f;document.body.classList.toggle("in-view",f);window.scrollTo(0,0)}
 function setLang(l){root.lang=l;root.dir=l==='en'?'ltr':'rtl';btn.textContent=l==='en'?'\u0639\u0631\u0628\u064a':'EN';document.title=l==='en'?'Houses Cafe':'\u0645\u0642\u0647\u0649 \u0627\u0644\u0628\u064a\u0648\u062a';try{localStorage.setItem('lang',l)}catch(e){}}
 var saved='ar';try{saved=localStorage.getItem('lang')||'ar'}catch(e){}
 setLang(saved==='en'?'en':'ar');
