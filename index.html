@@ -40,7 +40,7 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cairo",sans-
 .items{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 14px}
 .item{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 16px rgba(91,51,32,.09)}
 .item img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
-.item h3{margin:0;padding:10px 12px 12px;font-size:14px;font-weight:700;line-height:1.5}
+.item-info{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px 12px}.item h3{margin:0;padding:0;font-size:14px;font-weight:700;line-height:1.5}.price{flex:0 0 auto;font-size:13px;font-weight:800;color:var(--green);white-space:nowrap}
 .delivery{margin:26px 14px 0;padding:18px;text-align:center;background:#eef1dd;border:1px solid #dbe4c2;border-radius:22px}
 .delivery h2{margin:0 0 4px;font-size:16px;font-weight:700;color:var(--green)}
 .delivery p{margin:0 0 6px;font-size:12px;color:#7d7461}
@@ -79,29 +79,29 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-off
 <section id="drinks" class="view" hidden>
 <div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>مرطبات</h2></div>
 <div class="items">
-<article class="item"><img src="images/مرطبات/عصير فراولة.jpg" alt="عصير فراولة"><h3>عصير فراولة</h3></article>
-<article class="item"><img src="images/مرطبات/عصير برتقال.jpg" alt="عصير برتقال"><h3>عصير برتقال</h3></article>
+<article class="item"><img src="images/مرطبات/عصير فراولة.jpg" alt="عصير فراولة"><div class="item-info"><h3>عصير فراولة</h3><span class="price">12 د.ل</span></div></article>
+<article class="item"><img src="images/مرطبات/عصير برتقال.jpg" alt="عصير برتقال"><div class="item-info"><h3>عصير برتقال</h3><span class="price">10 د.ل</span></div></article>
 </div></section>
 
 <section id="hot" class="view" hidden>
 <div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>مشروبات ساخنة</h2></div>
 <div class="items">
-<article class="item"><img src="images/مشروبات ساخنة/سحلب.jpg" alt="سحلب"><h3>سحلب</h3></article>
-<article class="item"><img src="images/مشروبات ساخنة/قهوة عربية.jpg" alt="قهوة عربية"><h3>قهوة عربية</h3></article>
-<article class="item"><img src="images/مشروبات ساخنة/كابتشينو.jpg" alt="كابتشينو"><h3>كابتشينو</h3></article>
+<article class="item"><img src="images/مشروبات ساخنة/سحلب.jpg" alt="سحلب"><div class="item-info"><h3>سحلب</h3><span class="price">8 د.ل</span></div></article>
+<article class="item"><img src="images/مشروبات ساخنة/قهوة عربية.jpg" alt="قهوة عربية"><div class="item-info"><h3>قهوة عربية</h3><span class="price">7 د.ل</span></div></article>
+<article class="item"><img src="images/مشروبات ساخنة/كابتشينو.jpg" alt="كابتشينو"><div class="item-info"><h3>كابتشينو</h3><span class="price">10 د.ل</span></div></article>
 </div></section>
 
 <section id="breakfast" class="view" hidden>
 <div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>إفطار صباحي</h2></div>
 <div class="items">
-<article class="item"><img src="images/إفطار صباحي/افطار صباحي.jpg" alt="إفطار صباحي"><h3>إفطار صباحي</h3></article>
+<article class="item"><img src="images/إفطار صباحي/افطار صباحي.jpg" alt="إفطار صباحي"><div class="item-info"><h3>إفطار صباحي</h3><span class="price">25 د.ل</span></div></article>
 </div></section>
 
 <section id="pastries" class="view" hidden>
 <div class="back"><button class="back-btn" aria-label="رجوع"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><h2>معجنات</h2></div>
 <div class="items">
-<article class="item"><img src="images/معجنات/بيتزا كالزوني.jpg" alt="بيتزا كالزوني"><h3>بيتزا كالزوني</h3></article>
-<article class="item"><img src="images/معجنات/كالزوني.jpg" alt="كالزوني"><h3>كالزوني</h3></article>
+<article class="item"><img src="images/معجنات/بيتزا كالزوني.jpg" alt="بيتزا كالزوني"><div class="item-info"><h3>بيتزا كالزوني</h3><span class="price">18 د.ل</span></div></article>
+<article class="item"><img src="images/معجنات/كالزوني.jpg" alt="كالزوني"><div class="item-info"><h3>كالزوني</h3><span class="price">16 د.ل</span></div></article>
 </div></section>
 
 <section class="delivery"><h2>متوفر توصيل</h2><p>اطلب الآن واستمتع بخدمات مقهى البيوت</p><a href="tel:0913551525">0913551525</a></section>
